@@ -34,7 +34,7 @@ export default function CourseList() {
         <div className="stat"><span>진행 중</span><strong className="blue">{courses.length - doneCount}</strong></div>
       </section>
       <section className="panel">
-        <div className="panel-header"><h2>My Courses</h2><span className="small-note">{courses.length} courses</span></div>
+        <div className="panel-header"><h2>Learning Courses</h2><span className="small-note">{courses.length} courses</span></div>
         <p className="todo">실습 과제: 아래 Add 버튼과 완료 체크박스의 기능을 직접 구현하세요.</p>
         <form className="add-form" onSubmit={handleAdd}>
           <input className="input" value={newName} onChange={event => setNewName(event.target.value)} placeholder="새 과목명을 입력하세요" aria-label="새 과목명" />
