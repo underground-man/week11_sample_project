@@ -62,6 +62,7 @@ CourseItem은 부모에게 Props를 받는다.
 
 주요 코드 2
 courses와 newName 사용
+step2에서 기능 구현 전 코드를 기준으로 분석했다.
 
 <div className="panel-header"><h2>Learning Courses</h2><span className="small-note">{courses.length} courses</span></div>
 <p className="todo">실습 과제: 아래 Add 버튼과 완료 체크박스의 기능을 직접 구현하세요.</p>
@@ -99,11 +100,32 @@ App.css
 
 
 
+step4. 기능 추가
 
 
-5. AI 활용
+CourseList.jsx에 
+
+과목 추가
+
+입력한 과목명을 newName에 저장한다. 이때 빈 값이면 추가하지 않는다,새 과목은 미완료 상태로 courses 배열 끝에 추가한다.
+
+완료 상태 변경
+
+체크박스를 누르면 handleToggle이 실행된다. map으로 선택한 과목을 찾는다. completed 값을 반대로 바꾼다.
+완료 상태와 상단 통계가 바로 바뀐다.
+
+완료 필터
+
+전체 과목, 진행 중, 완료 중 하나를 선택한다.
+filter로 조건에 맞는 과목만 보여준다.
+원래 courses 배열은 바꾸지 않는다.
+
+
+
+6. AI 활용
 
 코드 구조를 이해할 때 사용했다.
 React 상태 흐름을 확인할 때 사용했다.
 화면 수정 계획과 코드 변경에 사용했다.
+과목 추가, 완료 변경, 완료 필터 구현에 사용했다.
 
